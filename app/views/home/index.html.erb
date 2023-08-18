@@ -1,2 +1,23 @@
-<h1>Hello World</h1>
-
+<h1 style="text-align:center">Hello, the prepouse of this service is to store your secret friend's contact information. And thats all. thank you and enjoy your life </h1>
+<div>
+    <ul class="" style="list-style-type:none ">  
+        <% if user_signed_in? %>
+            <li class="">
+            <%= link_to "Add Friends",  new_friend_path , class:"btn btn-success mb-2" %>
+            </li>
+            <li class="">
+                <%= button_to "Sign Out",  destroy_user_session_path , method: :delete, class:"btn btn-success mb-2" %>
+            </li>
+            <li class="">
+                <%= link_to "Edit Profile",  edit_user_registration_path , class:"btn btn-success mb-2" %>
+            </li>
+        <% else %>
+            <li class="">
+            <%= link_to "Sign In",  new_user_session_path , class:"btn btn-success mb-2" %>
+            </li>
+            <li class="">
+                <%= link_to "Sign Up",  new_user_registration_path , class:"btn btn-info mb-2" %>
+            </li>
+        <% end %>
+    </ul>
+</div>
