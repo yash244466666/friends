@@ -1,0 +1,13 @@
+<div class="container mb-3">
+  <h1>Friend Details</h1>
+  <div class="card bg-warning">
+    <div class="card-header ">
+      <h2><%= friend.first_name + ' ' + ' ' + friend.last_name %> </h2>
+    </div>
+    <ul class="list-group list-group-flush" >
+      <li class="list-group-item bg-secondary"><h3 style="color:#ffff">Email: <%= friend.email%></h3> </li>
+      <li class="list-group-item bg-secondary"><h3 style="color:#ffff">Phone: <%= friend.phone%></h3> </li>
+      <li class="list-group-item bg-secondary"><h3 style="color:#ffff">Facebook: <%= friend.facebook %></h3></li>
+    </ul>
+  </div>
+</div>

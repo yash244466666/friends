@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_for :users
+  resources :friends
+  root 'home#index'
+  get 'home/about'
+  
+  # Remove the following line to fix the error
+  # delete '/users/sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
 end
